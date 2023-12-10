@@ -1,0 +1,19 @@
+{% extends 'canciones/layouts/base.html' %}
+
+
+{% block title %}
+    Inicio
+{% endblock title %}
+    
+
+{% block contenido %}
+    <h1>Inicio</h1>
+    
+    {% if request.user.is_authenticated %}
+        <h4>Bienvenido, {{ user.username }}</h4>
+    {% else %}
+        <h4>Todos son bienvenidos</h4>
+    {% endif %}
+        
+{% endblock contenido %}
+    

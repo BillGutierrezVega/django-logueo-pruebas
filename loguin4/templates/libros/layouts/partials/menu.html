@@ -1,0 +1,9 @@
+<ul>
+    <li><a href="{% url 'inicio' %}">Inicio</a></li>
+    <li><a href="{% url 'libros' %}">Libros</a></li>
+    {% if request.user.is_authenticated %}
+        <li><a href="{% url 'exit' %}">Salir</a></li>
+    {% else %}
+        <li><a href="{% url 'login' %}">Ingresar</a></li>
+    {% endif %}
+</ul>

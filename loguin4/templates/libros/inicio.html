@@ -1,0 +1,19 @@
+{% extends 'libros/layouts/base.html' %}
+
+
+{% block title %}
+    Inicio
+{% endblock title %}
+    
+
+{% block contenido %}
+    <h1>Inicio</h1>
+    <hr>
+    
+    {% if request.user.is_authenticated %}
+        <h4>Bienvenido, {{ user.username }}</h4>
+    {% else %}
+        <h4>Algunos son bienvenidos</h4>
+    {% endif %}
+        
+{% endblock contenido %}

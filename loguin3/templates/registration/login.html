@@ -1,0 +1,18 @@
+{% extends 'canciones/layouts/base.html' %}
+
+
+{% block title %}
+    Login
+{% endblock title %}
+    
+
+{% block contenido %}
+    <h1>Login</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="text" name="username" id="" placeholder="Ingrese usuario"><br>
+        <input type="password" name="password" id="" placeholder="Ingrese password"><br>
+        <button type="submit">Enviar</button>
+    </form>
+{% endblock contenido %}
+    

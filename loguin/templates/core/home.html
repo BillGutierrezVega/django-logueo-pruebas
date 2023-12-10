@@ -1,0 +1,12 @@
+{% extends 'core/layouts/base.html' %}
+
+
+{% block contenido %}
+    <h1>inicio</h1>
+    <hr>
+    {% if request.user.is_authenticated %}
+        <h4>Bienvenido, {{ user.username | upper }}</h4>
+    {% else %}
+        <h4>Bienvenido, todos los usuarios</h4>
+    {% endif %}
+{% endblock contenido %}

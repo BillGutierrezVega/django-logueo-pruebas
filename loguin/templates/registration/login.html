@@ -1,0 +1,12 @@
+{% extends 'core/layouts/base.html' %}
+
+
+{% block contenido %}
+    <h1>Login</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Ingrese usuario"><br>
+        <input type="password" name="password" id=""><br>
+        <button type="submit">Enviar</button>
+    </form>
+{% endblock contenido %}
